@@ -51,7 +51,7 @@ app.post('/questions', (req, res) => {
     const questionId = req.params.id;
     const { question, answer } = req.body;
     db.query(
-      'UPDATE question SET Question = ?, answer = ? WHERE id = ?',
+      'UPDATE Question SET question = ?, answer = ? WHERE id = ?',
       [question, answer, questionId],
       (err) => {
         if (err) {
